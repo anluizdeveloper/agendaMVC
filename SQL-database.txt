@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS `agenda`;
+
+CREATE TABLE IF NOT EXISTS `agenda`.`cliente` (
+	`idCliente` INT(11) NOT NULL AUTO_INCREMENT,
+	`nomeCliente` VARCHAR(200) NOT NULL,
+	`telefoneCliente` INT(10),
+	`celularCliente` INT(11) NOT NULL,
+	`emailCliente` VARCHAR(100) NOT NULL,
+	PRIMARY KEY (`idCliente`)
+) ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS `agenda`.`admin` (
+	`idUser` INT(11) NOT NULL AUTO_INCREMENT,
+	`user` VARCHAR(200) NOT NULL,
+	`userPW` VARCHAR(255) NOT NULL,
+	`userSessionID` VARCHAR(255) DEFAULT NULL,
+	PRIMARY KEY (`idUser`)
+) ENGINE=INNODB;
